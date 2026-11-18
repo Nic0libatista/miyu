@@ -1,0 +1,327 @@
+:root{
+    --preto: #000000;
+    --branco: #ffffff;
+    --cinza: #333;
+    --dourado: #C5A880;
+    --ouro: #6d4a1e;
+    --azul: #0A192F;
+}
+
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Estilo do Logo  */
+.textoLogo {
+  font-family: 'Bodoni Moda', 'Didot', 'Bodoni MT', serif;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 28px;
+  color: #000000;
+}
+
+/* Estilo do Menu */
+.textoMenu {
+  font-family: 'Montserrat', 'Avenir', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-shadow: #000000 1px 0 10px;
+}
+
+/* Texto principal */
+.textoPrincipal {
+  font-family: 'Montserrat', 'Avenir', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  color: #111111;
+  text-align: center;
+}
+
+.topo{
+    padding: 8px;
+    background-color: var(--preto);
+    color: var(--branco);
+    text-align: center;
+}
+
+.menu{
+    position: fixed;  
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: 0.35s ease, padding 0.35s ease;
+}
+
+.menu:hover{
+    background-color: var(--preto);
+    translate: 1px;
+    font-size: 1.1rem;
+    padding: 0 10px 20px 10px;
+
+}
+
+.menu:hover ul li a, .menu:hover .textoLogo{   
+    color: var(--branco);
+}
+
+.menu ul li a:hover, header.rolando .menu ul li a:hover{
+    color: var(--dourado);
+}
+
+header.rolando .menu{
+    transform: translateY(-33px);
+    position: fixed;
+    background-color: var(--preto);
+}
+
+header.rolando .menu ul li a, header.rolando .menu .textoLogo{
+    color: var(--branco);
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.menu ul li{
+    padding: 10px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: var(--azul);
+}
+
+.banner img{
+    width: 100%;
+}
+
+.infos{
+   
+    background-color: var(--cinza);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 10px;
+}
+
+.info{
+    display: flex;
+    gap: 10px;
+    margin: auto;
+    
+}
+
+.infoimg{
+    width: 24px;
+    padding: 5px;
+}
+
+.info p{
+    color: var(--branco);
+}
+
+.linha{
+    border: 1px solid var(--dourado);
+    width: 200px;
+    margin: 20px 0;
+    margin: 0 auto;
+}
+
+.especialidade{
+    margin: 30px;
+}
+
+.conjimagens{
+    margin: 30px auto;
+    display: flex;
+    flex: 1;
+    gap: 30px;
+}
+
+.imagemEspecialidade{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.imagemEspecialidade img{
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.textoEspecialidade{ 
+    display: none;
+    position: absolute;
+    top: 115px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.textoEspecialidade h2{
+    color: var(--branco);
+    text-shadow: #000000 1px 0 10px;
+}
+
+.imagemEspecialidade:hover img{
+    opacity: 0.8;
+    border-radius: 20px;
+}
+
+.imagemEspecialidade:hover .textoEspecialidade{
+    display: block;
+    opacity: 1 !important;
+}
+
+hr{
+    border: 1px solid var(--dourado);
+    width: 100%;
+    margin: 20px 0;
+    margin: 0 auto;
+}
+
+i{
+    color: var(--ouro);
+}
+
+.diferenciais p{
+    margin: 8px auto;
+    font-size: 1rem;
+}
+
+
+
+
+/* //////////////////////// PRODUTOS */
+
+.bannerProd{
+    background-color: var(--dourado);
+    height: 300px;
+}
+
+.bannerProd h2{
+    position: relative;
+    top: 130px;
+}
+
+#colar{
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.produtos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;   
+}
+
+.produto{
+    min-height: 300px !important;
+    max-height: 300px;
+    margin-bottom: 30px;
+}
+
+.produto:hover .botaoComprar{
+    display: block;
+    transition: 0.5s ease;
+}
+
+.botaoComprar{
+    display: none;
+    background-color: var(--dourado);
+    color: var(--branco);
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+}
+.botaoComprar:hover{
+    background-color: var(--azul);
+}
+
+.descricaoProd{
+    max-width: 80%;
+}
+
+.textoPreco{
+    color: var(--azul);
+}
+
+.imagemProd img{
+    width: 250px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+@media (max-width:1100px) {
+    .textoEspecialidade{
+        display: block;
+    }
+    
+    .imagemEspecialidade img{
+        border-radius: 15px 25px;
+    }
+}
+
+@media (max-width:600px) {
+
+    .infos{
+        display: block;
+    }
+
+    .conjimagens{
+        display: block;
+        margin-top: 30px;
+        
+    }
+
+    .imagemEspecialidade{
+        margin: 0 auto 20px;
+    }
+
+    
+
+    .textoEspecialidade{
+        display: block;
+    }
+
+    .diferenciais p {
+    margin: 18px auto;
+    max-width: 90%;
+    }
+
+    .produtos{
+        display: block;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .botaoComprar{
+        display: block;
+    }
+
+    .produto {
+        max-height: none;
+        text-align: center;
+    }
+
+    .descricaoProd{
+        max-width: none;
+        text-align: center;
+    }
+    
+}

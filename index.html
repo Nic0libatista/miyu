@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <title> JOIAS </title>
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="topo">
+            <p class="textoMenu">
+                Frete grátis durante toda black friday.
+            </p>    
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <p class="textoLogo"> MIYU </p>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="banner">
+        <source media="(min-width:100px )" srcset="assets/bannerex.png">
+        <img src="assets/bannerex.png" alt="Banner">
+        <div class="infos">
+            <div class="info">
+                <div class="infoimg">
+                    <img src="assets/icone_frete.png" alt="icone frete">
+                </div>
+                <p class="textoPrincipal"> Envio para todo o brasil</p>
+            </div>
+            <div class="info">
+                <div class="infoimg">
+                    <img src="assets/icone_cartao.png" alt="icone cartão">
+                </div>
+                <p class="textoPrincipal"> Parcelamento em até 6x</p>
+            </div>
+            <div class="info">
+                <div class="infoimg">
+                    <img src="assets/icone_garantia.png" alt="icone garantia">
+                </div>
+                <p class="textoPrincipal"> Garantia de 1 ano </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="especialidade">
+        <h1 class="textoPrincipal"> Encontre seu novo vício </h1>
+        <hr class="linha">
+
+    <div class="conjimagens">
+
+        <div class="imagemEspecialidade">
+            <img src="assets/pulseira.jpg" alt="imagem colar">
+        <div class="textoEspecialidade">
+            <h2 class="textoPrincipal"> Colares </h2>
+        </div>
+        </div>
+
+        <div class="imagemEspecialidade">
+            <img src="assets/pulseira.jpg" alt="imagem anel">
+        <div class="textoEspecialidade">
+            <h2 class="textoPrincipal"> Alianças <br> personalizadas </h2>
+        </div>
+        </div>
+
+        <div class="imagemEspecialidade">
+            <img src="assets/pulseira.jpg" alt="imagem pulseira">
+        <div class="textoEspecialidade">
+            <h2 class="textoPrincipal"> Pulseiras <br> minimalistas </h2>
+        </div>
+        </div>
+
+    </div>
+    </section>
+
+    <section class="diferenciais">
+        <hr>
+        <p class="textoPrincipal">
+            Nossas semijoias possuem acabamento refinado, com <i> banho de Ouro 18K </i> ou <i> Ródio Branco </i>.
+        </p>
+        <p class="textoPrincipal">
+            Peças <i>hipoalergênicas</i>, desenvolvidas para acompanhar você em todos os momentos.
+        </p>
+        <p class="textoPrincipal">
+            Acessórios que vão além das tendências e continuam <i> valorizando</i> suas produções.
+        </p>
+        <hr>
+    </section>
+
+
+
+
+
+
+    <script>
+    const cabecalho = document.getElementById('cabecalho');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 32) {
+            cabecalho.classList.add('rolando');
+        } else {
+            cabecalho.classList.remove('rolando');
+        }
+    });
+</script>
+</body>
+</html>
