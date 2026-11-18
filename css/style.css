@@ -5,6 +5,7 @@
     --dourado: #C5A880;
     --ouro: #6d4a1e;
     --azul: #0A192F;
+    --marronzin: #BEB5B0;
 }
 
 *{
@@ -204,6 +205,48 @@ i{
 }
 
 
+footer h2{
+    margin-top: 30px;
+    text-align: center;
+    color: var(--branco);
+}
+footer, footer {
+    background-color: var(--marronzin);
+    color: var(--branco);
+    text-shadow: 10px var(--preto);
+}
+
+.rodape{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+}
+
+.rodape1 img{
+    border: 1px solid var(--cinza);
+    width: 49px;
+    height: 37px;
+}
+
+.rodape2 .links ul{
+    list-style: none;
+}
+
+.rodape2 .links ul li a{
+    text-decoration: none;
+    color: var(--branco);
+    text-shadow: 1px 0 10px var(--branco);
+}
+
+.rodape .links ul li a:hover{
+    color: var(--ouro);
+}
+
+.direitos{
+    padding-top: 9px;
+    text-align: center;
+    background-color: var(--dourado);
+}
 
 
 /* //////////////////////// PRODUTOS */
@@ -211,6 +254,10 @@ i{
 .bannerProd{
     background-color: var(--dourado);
     height: 300px;
+}
+
+.bannerProdMargin{
+    margin-top: 80px;
 }
 
 .bannerProd h2{
