@@ -209,6 +209,15 @@ i{
     text-align: center;
     margin: 30px auto 0 auto;
 }
+h2 a {
+    text-decoration: none; 
+    color: inherit;        
+    transition: 0.3s ease;
+}
+
+h2 a:hover {
+    color: var(--preto); 
+}
 
 .especiais h3{
     color: var(--cinzaClaro);
@@ -251,7 +260,7 @@ i{
 }
 
 label{
-    color: var(--ouro);
+    color: var(--branco);
 }
 
 .formOrcamento input, .formOrcamento select {
@@ -420,11 +429,11 @@ footer{
 
 /* Carrinhoooo */
 #bodyCarrinho{
-    background-color: var(--cinzaClaro);
+    background-color: var(--marronzin);
 }
 
 .tituloCarrinho{
-    margin: 50px auto 30px;
+    margin: 80px auto 30px;
     text-align: center;
 }
 .carrinho{
@@ -456,7 +465,7 @@ footer{
 
 .resumo{
     padding: 30px;
-    background-color: var(--cinzaClaro);
+    background-color: #e3b7b4;
     max-height: 300px;
     justify-content: end;
     margin: 0; 
