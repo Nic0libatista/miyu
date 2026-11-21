@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <title> JOIAS </title>
+</head>
+<body id="bodyCarrinho">
+    <header id="cabecalho">
+        <div class="topo">
+            <p class="textoMenu">
+                Frete grátis durante toda black friday.
+            </p>    
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <p class="textoLogo"> MIYU </p>
+                <li><a href="carrinho.html"><img src="assets/carrinho.png" alt="Carrinho"></a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+   <!-- CARRINHO -->
+    <h2 class="tituloCarrinho">Meu Carrinho</h2>
+    <div class="carrinho">
+        
+
+        <div id="listaCarrinho">
+
+        </div>
+
+        <div class="resumo">
+
+            
+            <label for="cep"></label>
+            <input type="number" name="cep" id="cep" placeholder="CEP" maxlength="9" >
+            <p class="subtotal">
+                subtotal: <span id="subtotal">R$ 0,00</span>
+            </p>
+            <p class="frete">
+            Frete: <span id="frete">R$ 0,00</span>
+            </p>
+            <p class="desconto">
+            Desconto (Frete Grátis): <span id="desconto">R$ 0,00</span>
+            </p>
+            <p class="total">
+                Total: <span id="total">R$ 0,00</span>
+            </p>
+
+            <button class="finalizar" onclick="finalizarCompra()">
+                Finalizar Compra
+            </button>
+
+            <button class="limpar" onclick="limparCarrinho()">
+                Limpar Carrinho
+            </button>
+            <b class="safe"> Pagamento seguro </b>
+            <div class="formasPag">
+                
+                    <img src="assets/visa.png" alt="Cartão Visa">
+                    <img src="assets/icon_master.png" alt="Cartão Mastercard">
+                    <img src="assets/pix.png" alt="Pix">
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script>
+    const cabecalho = document.getElementById('cabecalho');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 32) {
+            cabecalho.classList.add('rolando');
+        } else {
+            cabecalho.classList.remove('rolando');
+        }
+    });
+</script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -24,7 +24,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="produtos.html">Produtos</a></li>
                 <p class="textoLogo"> MIYU </p>
-                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="carrinho.html"><img src="assets/carrinho.png" alt="Carrinho"></a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </div>
@@ -63,14 +63,14 @@
     <div class="conjimagens">
 
         <div class="imagemEspecialidade">
-            <img src="assets/pulseira.jpg" alt="imagem colar">
+            <img src="assets/colares.png" alt="imagem colar">
         <div class="textoEspecialidade">
             <h2 class="textoPrincipal"> Colares </h2>
         </div>
         </div>
 
         <div class="imagemEspecialidade">
-            <img src="assets/pulseira.jpg" alt="imagem anel">
+            <img src="assets/aliancaPersonalizada.png" alt="imagem anel">
         <div class="textoEspecialidade">
             <h2 class="textoPrincipal"> Alianças <br> personalizadas </h2>
         </div>
@@ -100,9 +100,59 @@
         <hr>
     </section>
 
+    <section class="especiais">
+        <div>
+            <h2 class="textoPrincipal"> DIAMANTES PERSONALIZADOS </h2>
+            
+            <h3> Surpreenda quem você ama com algo especial. </h3>
+            <div class="especiaisImg">
+                <img src="assets/aliancaVanGogh.png" alt="Aliança inspirada em Van Gogh">
+            </div>    
+        </div>
+    </section>
+    <section class="contatos">
+        <div class="contato">
+            <div class="contatoImg">
+                <img src="assets/maos.jpeg" alt="">
+            </div>
+            <div class="formularioContato">
+                <h3> Sua ideia merece sair do papel. </h3>
+
+                <form action="" class="formOrcamento">
+                    <label for="nome"> Nome Completo </label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome">
+
+                    <label for="telefone"> Telefone </label>
+                    <input type="tel" name="telefone" id="telefone" placeholder="telefone">
+
+                    <label for="tipoPeca">Tipo de Peça </label>
+                    <select id="tipoPeca" name="tipoPeca" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="colar">Colar </option>
+                        <option value="anel">Anel / Aliança</option>
+                        <option value="brinco">Brincos</option>
+                        <option value="pulseira">Pulseira</option>
+                    </select>
+                    
+                    <label for="material">Material Desejado</label>
+                    <select id="material" name="material">
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="prata925">Prata 925</option>
+                        <option value="ouro18k">Ouro 18k</option>
+                        <option value="banhado">Banhado a Ouro</option>
+                        <option value="perolas">Pérolas Naturais</option>
+                        <option value="indefinido">Ainda não decidi</option>
+                    
+                    </select>
+                    <button type="submit" class="botaoEnviar" onclick="SoliOrca()">Solicitar Orçamento</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
 
     <footer>
-         <h2 class="textoLogo" style="color: white;">
+         <h2 class="textoLogo">
                MIYU
         </h2>
 
@@ -136,9 +186,10 @@
     
     <div class="direitos">
         <hr>
-        <p> &copy;2026. Direitos reservados a Muyi. </p>
-        <hr class="linha">
-        <p> Desenvolvido por Lucas, Marcelo e Nicoli. </p>
+        <hr>
+        <p> &copy;2026. Direitos reservados a Miyu. </p>
+        <p> Desenvolvido por Nic0libatista. </p>
+        
     </div>
     </footer>
 
@@ -157,6 +208,11 @@
             cabecalho.classList.remove('rolando');
         }
     });
+
+    function SoliOrca(){
+    alert("Olá. \n Agradecemos seu interesse em entrar em contato mas não estamos disponíveis no momento.");    
+    }
+
 </script>
 </body>
 </html>

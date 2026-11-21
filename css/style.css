@@ -2,6 +2,7 @@
     --preto: #000000;
     --branco: #ffffff;
     --cinza: #333;
+    --cinzaClaro: #33333396;
     --dourado: #C5A880;
     --ouro: #6d4a1e;
     --azul: #0A192F;
@@ -204,14 +205,93 @@ i{
     font-size: 1rem;
 }
 
+.especiais{
+    text-align: center;
+    margin: 30px auto 0 auto;
+}
+
+.especiais h3{
+    color: var(--cinzaClaro);
+    margin-bottom: 10px;
+}
+
+.especiaisImg {
+    background-image: url(../assets/noiteestrelada.jpg);
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.contato{
+    display: flex;
+    background-color: #5487a4;
+}
+.contatoImg{
+    width: 60%;
+}
+
+.contatoImg img{
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+}
+.formularioContato{
+    margin: 0 auto;
+}
+.formOrcamento {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+.formularioContato h3{
+    margin: 10px auto 15px auto;
+    font-family: 'Montserrat', 'Avenir', sans-serif;
+    font-weight: 400;
+}
+
+label{
+    color: var(--ouro);
+}
+
+.formOrcamento input, .formOrcamento select {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+    background-color: #FAF9F6;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: var(--azul);
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.formOrcamento input:focus, .formOrcamento select:focus {
+    border: 1px solid;
+    border-color: var(--ouro);
+    background-color: #ffffff;
+}
+
+.formOrcamento button{
+    width: 100%;
+    padding: 10px 14px;
+    color: var(--ouro);
+    border-radius: 10px;
+    border: 1px solid var(--ouro);
+    margin-bottom: 10px;
+}
+
+.formOrcamento button:hover{
+    background-color: var(--marronzin)
+}
 
 footer h2{
-    margin-top: 30px;
     text-align: center;
     color: var(--branco);
 }
-footer, footer {
-    background-color: var(--marronzin);
+footer{
+    background-color: var(--dourado);
     color: var(--branco);
     text-shadow: 10px var(--preto);
 }
@@ -220,6 +300,7 @@ footer, footer {
     display: flex;
     justify-content: space-around;
     margin: 30px auto;
+    color: var(--preto);
 }
 
 .rodape1 img{
@@ -234,8 +315,7 @@ footer, footer {
 
 .rodape2 .links ul li a{
     text-decoration: none;
-    color: var(--branco);
-    text-shadow: 1px 0 10px var(--branco);
+    color: var(--preto);
 }
 
 .rodape .links ul li a:hover{
@@ -243,9 +323,13 @@ footer, footer {
 }
 
 .direitos{
-    padding-top: 9px;
+    padding: 9px 12px ;
     text-align: center;
-    background-color: var(--dourado);
+    background-color: var(--cinzaClaro);
+}
+
+.direitos p{
+    margin-top: 4px;
 }
 
 
@@ -257,7 +341,7 @@ footer, footer {
 }
 
 .bannerProdMargin{
-    margin-top: 80px;
+    margin-bottom: 20px;
 }
 
 .bannerProd h2{
@@ -265,28 +349,42 @@ footer, footer {
     top: 130px;
 }
 
-#colar{
+#colares, #pulseiras, #aneis{
     display: flex;
     max-width: 1200px;
     margin: 30px auto;
 }
 
 .produtos{
+    max-width: 1300px;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;   
+    gap: 20px;  
+    align-items: stretch;
+    margin: 0 auto;
+}
+
+.descricaoProd {
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+    font-size: 13px;
 }
 
 .produto{
-    min-height: 300px !important;
-    max-height: 300px;
-    margin-bottom: 30px;
+    min-height: 430px !important;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
 }
 
 .produto:hover .botaoComprar{
     display: block;
     transition: 0.5s ease;
+    align-items: end;
 }
+
 
 .botaoComprar{
     display: none;
@@ -294,7 +392,7 @@ footer, footer {
     color: var(--branco);
     padding: 10px;
     width: 100%;
-    margin: 10px 0;
+    margin: auto;
 }
 .botaoComprar:hover{
     background-color: var(--azul);
@@ -306,12 +404,130 @@ footer, footer {
 
 .textoPreco{
     color: var(--azul);
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 3px;
 }
 
 .imagemProd img{
-    width: 250px;
+    max-width: 100%;
+    width: 100%;
     height: 200px;
     margin: 0 auto;
+    object-fit: cover;
+}
+
+
+/* Carrinhoooo */
+#bodyCarrinho{
+    background-color: var(--cinzaClaro);
+}
+
+.tituloCarrinho{
+    margin: 50px auto 30px;
+    text-align: center;
+}
+.carrinho{
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.carrinho.carrinhoVazio {
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    margin: 0 auto;
+}
+
+.carrinho.carrinhoVazio .mensagem {
+    font-size: 20px;
+    color: var(--cinza);
+    text-align: center;
+}
+
+.carrinho.carrinhoVazio .resumo {
+    display: none;
+}
+
+
+.resumo{
+    padding: 30px;
+    background-color: var(--cinzaClaro);
+    max-height: 300px;
+    justify-content: end;
+    margin: 0; 
+    margin-left: auto;
+}
+.subtotal{
+    color: var(--cinza);
+    font-size: 20px;
+}
+.total{
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 8px;
+}
+#cep{
+    padding: 12px;
+    width: 80%;
+    margin: 8px auto;
+}
+
+.finalizar, .limpar{
+    padding: 12px;
+    width: 90%;
+    margin: 8px auto;
+}
+
+.finalizar{
+    background-color: var(--preto);
+    color: var(--branco);
+}
+.safe{
+    color: var(--cinza);
+    text-align: center;
+}
+
+.resumo .formasPag{
+    text-align: center;
+}
+
+.item{
+    margin: 10px auto;
+    display: flex;
+    gap: 20px;
+}
+
+
+
+.item strong{
+    font-size: 18px;
+    color: var(--ouro);
+}
+
+.btnRemover button{
+    background-color: red;
+    padding: 10px;
+    color: var(--branco);
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.menos, .mais{
+    padding: 5px;
+    border-radius: 50%;
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+
+.imagemCarrinho{
+    width: 100px;
+    height: 100px;
 }
 
 @media (max-width:1100px) {
@@ -322,6 +538,11 @@ footer, footer {
     .imagemEspecialidade img{
         border-radius: 15px 25px;
     }
+
+    .botaoComprar{
+        display: block;
+    }
+
 }
 
 @media (max-width:600px) {
@@ -357,9 +578,6 @@ footer, footer {
         margin: 0 auto;
     }
 
-    .botaoComprar{
-        display: block;
-    }
 
     .produto {
         max-height: none;
@@ -369,6 +587,25 @@ footer, footer {
     .descricaoProd{
         max-width: none;
         text-align: center;
+    }
+
+    .especiaisImg img{
+    max-width: 80%;
+    }
+
+    .contatoImg{
+        display: none;
+    }
+
+    .carrinho{
+        display: block;
+        max-width: 90%;
+    }
+    .infoItem{
+    max-width: 130px;
+    }
+    .imagemCarrinho {
+    height: 120px;
     }
     
 }
