@@ -237,21 +237,33 @@ function mostrarCarrinho() {
                     <strong>${item.nome}</strong>
                     <p>${moeda(item.preco)} cada</p>
                     <p>Subtotal: ${moeda(subtotal)}</p>
-                    <div class="btnRemover">
-                        <button class="remover" onclick="remover(${item.id})">
-                            Remover
-                        </button>
-                    </div>
-                </div>
-
-                <div class="quantidade">
+                     <div class="quantidade">
                     <button class="menos" onclick="alterarQuantidade(${item.id}, -1)">-</button>
                     <strong>${item.quantidade}</strong>
                     <button class="mais" onclick="alterarQuantidade(${item.id}, 1)">+</button>
+                    <div class="embalar">
+                        <input type="checkbox" name="embalar" id="embalar"> 
+                        <label for="embalar">
+                            <img src="assets/embalagem.png" alt="embalagem para presente"> 
+                            <span class="textoEmbalar">Embalar para presente</span>
+                        </label>
+                    </div>
+                    </div>
+                    
                 </div>
+
+                <div class="btnRemover">
+                        <button class="remover" onclick="remover(${item.id})">
+                            <img src="assets/delete.png">
+                        </button>
+                    </div>
             </div>
+            
+            <hr>
         `;
     });
+
+    
 
     // VERIFICA SE O CEP TEM 8 DÍGITOS ANTES DE MOSTRAR O FRETE
     let campoCep = document.getElementById("cep");
@@ -278,6 +290,42 @@ function mostrarCarrinho() {
     if (desconto) desconto.textContent = "-" + moeda(valorDesconto);
     if (total) total.textContent = moeda(totalFinal);
 }
+
+let freteAtivo = false;
+
+// FUNÇÃO EXCLUSIVA PARA O ENVIO/CÁLCULO DO CEP
+function calcularCep() {
+    let campoCep = document.getElementById("cep");
+    if (!campoCep) return;
+
+    let cep = campoCep.value.replace(/\D/g, "");
+
+    // Remove aviso anterior, se existir
+    let infoCepAntiga = document.getElementById("infoCep");
+    if (infoCepAntiga) {
+        infoCepAntiga.remove();
+    }
+
+    if (cep.length !== 8) {
+        freteAtivo = false;
+        alert("Digite um CEP válido com 8 números!");
+        mostrarCarrinho();
+        return;
+    }
+
+    freteAtivo = true;
+
+    // Cria a div logo após o input #cep
+    campoCep.insertAdjacentHTML("beforebegin", `
+        <div id="infoCep" class="avisoCep">
+            <p> Você ganhou <b> frete gratis </b>! </p>
+            <p>Entrega para o CEP ${cep}: 3 a 5 dias úteis</p>
+        </div>
+    `);
+
+    mostrarCarrinho();
+}
+
 
 // ALTERAR QUANTIDADE
 function alterarQuantidade(id, valor) {
@@ -329,7 +377,7 @@ function finalizarCompra() {
     if (cep.length !== 8) {
         alert("Confira seu cep antes de finalizar a compra!");
         return;
-    }
+    } 
 
     let valorFrete = 10;
     let valorDesconto = valorFrete;

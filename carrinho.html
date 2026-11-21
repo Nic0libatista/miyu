@@ -19,7 +19,7 @@
             </p>    
         </div>
 
-        <div class="menu">
+        <div class="menu" id="menuCarrinho">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="produtos.html">Produtos</a></li>
@@ -40,10 +40,10 @@
         </div>
 
         <div class="resumo">
-
             
-            <label for="cep"></label>
-            <input type="number" name="cep" id="cep" placeholder="CEP" maxlength="9" >
+            <div class="campoCep">
+            <input type="text" name="cep" id="cep" placeholder="Digite seu CEP" maxlength="8" onblur="calcularCep()">
+            </div>
             <p class="subtotal">
                 subtotal: <span id="subtotal">R$ 0,00</span>
             </p>
@@ -51,8 +51,9 @@
             Frete: <span id="frete">R$ 0,00</span>
             </p>
             <p class="desconto">
-            Desconto (Frete Grátis): <span id="desconto">R$ 0,00</span>
+            Desconto: <span id="desconto">R$ 0,00</span>
             </p>
+            <hr class="hrResumoItem">
             <p class="total">
                 Total: <span id="total">R$ 0,00</span>
             </p>

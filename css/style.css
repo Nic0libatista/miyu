@@ -7,6 +7,8 @@
     --ouro: #6d4a1e;
     --azul: #0A192F;
     --marronzin: #BEB5B0;
+    --rosaSuave: #f08769;
+    --rosinha:#e3b7b4;
 }
 
 *{
@@ -101,6 +103,10 @@ header.rolando .menu ul li a, header.rolando .menu .textoLogo{
 .menu ul li a{
     text-decoration: none;
     color: var(--azul);
+}
+
+.menu img{
+    width: 24px;
 }
 
 .banner img{
@@ -429,9 +435,18 @@ footer{
 }
 
 
-/* Carrinhoooo */
+/* Carrinhoooo 
 #bodyCarrinho{
-    background-color: var(--marronzin);
+    background-color: #e3b7b4;
+}
+    */
+
+#menuCarrinho{
+    background-color: var(--dourado);
+}
+
+#menuCarrinho ul li a:hover{
+    color: var(--preto);
 }
 
 .tituloCarrinho{
@@ -464,14 +479,19 @@ footer{
     display: none;
 }
 
+#listaCarrinho {
+    width: 48%;
+    max-width: 700px;
+}
 
 .resumo{
     padding: 30px;
-    background-color: #e3b7b4;
-    max-height: 300px;
+    background-color: var(--rosinha);
+    height: 400px;
     justify-content: end;
     margin: 0; 
     margin-left: auto;
+    border-left: 3px solid var(--dourado);
 }
 .subtotal{
     color: var(--cinza);
@@ -487,6 +507,36 @@ footer{
     width: 80%;
     margin: 8px auto;
 }
+
+#cep:focus{
+    outline: none;
+    border-left: 3px solid var(--dourado);
+}
+
+.avisoCep {
+    background-color: #FAF9F6; 
+    width: 80%;
+    border-left: 3px solid var(--dourado);
+    padding: 10px 12px;
+    margin: 10px 0 15px 0;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--cinza);
+}
+
+.avisoCep p:first-child {
+    color: var(--preto);
+    margin-bottom: 3px;
+}
+
+.avisoCep b {
+    color: var(--ouro);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
 
 .finalizar, .limpar{
     padding: 12px;
@@ -514,18 +564,23 @@ footer{
 }
 
 
-
 .item strong{
     font-size: 18px;
     color: var(--ouro);
 }
 
+.btnRemover{
+    margin-left: auto;
+    background-color: transparent;
+}
+
 .btnRemover button{
-    background-color: red;
+    background-color: transparent;
     padding: 10px;
     color: var(--branco);
     border-radius: 10px;
     margin-top: 5px;
+    margin-right: 2px;
 }
 
 .menos, .mais{
@@ -540,6 +595,24 @@ footer{
     width: 100px;
     height: 100px;
 }
+.hrResumoItem{
+    border: 1px solid var(--branco);
+    width: 80%;
+    margin: 5px 0;
+}
+
+.textoEmbalar{
+    color: var(--preto);
+}
+
+.embalar input[type="checkbox"] {
+    margin-top: 3px;
+    accent-color: var(--rosaSuave);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
 
 @media (max-width:1100px) {
     .textoEspecialidade{
@@ -612,11 +685,24 @@ footer{
         display: block;
         max-width: 90%;
     }
+    #listaCarrinho {
+    width: 100%;
+    max-width: 700px;
+    }
+
     .infoItem{
-    max-width: 130px;
+    max-width: 70%;
     }
     .imagemCarrinho {
     height: 120px;
+    }
+
+    .resumo{
+        margin-bottom: 10px;
+    }
+
+    .embalar{
+        margin-top: 3px;
     }
     
 }
