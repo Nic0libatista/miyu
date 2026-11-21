@@ -300,7 +300,6 @@ footer h2{
     color: var(--branco);
 }
 footer{
-    background-color: var(--dourado);
     color: var(--branco);
     text-shadow: 10px var(--preto);
 }
@@ -335,6 +334,9 @@ footer{
     padding: 9px 12px ;
     text-align: center;
     background-color: var(--cinzaClaro);
+}
+.hrDireitos{
+    border: 1px solid var(--branco);
 }
 
 .direitos p{
